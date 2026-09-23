@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Sreelakshmi - Portfolio</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#home" class="logo">Sreelakshmi.dev</a>
+
+            <i class='bx bx-menu' id="menu-icon"></i>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#project">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- home code -->
+        <section class="home" id="home">
+            <div class="home-container">
+        
+                <div class="home-img">
+                    <div class="home-img-circle">
+                        <img src="myPhoto.PNG" alt="Profile">
+                    </div>
+                </div>
+        
+                <div class="home-content">
+                    <p class="home-greet fade-up delay-1">Hello, Myself</p>
+
+                    <h1 class="home-name slide-left">Sreelakshmi</h1>
+
+                    <h2 class="home-role typewriter">And I'm a Frontend Developer</h2>
+
+                    <p class="home-desc fade-up delay-2">
+                        I build scalable, high‑performance interfaces with
+                        <strong>Angular, TypeScript, RxJS, Signals and Tailwind CSS</strong>, transforming
+                        complex workflows into clean, reliable user experiences.
+                    </p>
+
+        
+                    <div class="home-socials">
+                        <a href="https://www.linkedin.com/in/sreelakshmi-m-s-6561b2179" target="_blank" class="social-circle"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://github.com/SreelakshmiSonu" target="_blank" class="social-circle"><i class='bx bxl-github'></i></a>
+                    </div>
+        
+                    <a href="Sreelakshmi - Frontend Developer - CV.pdf" target="_blank" class="btn-download" download>Download CV</a>
+
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- About section -->
+
+        <section class="about" id="about">
+            <div class="about-container">
+        
+                <!-- TEXT FIRST -->
+                <div class="about-content">
+                    <h2 class="about-title">About Me</h2>
+                    <h3 class="about-subtitle">I'm a Frontend Developer</h3>
+        
+                    <!-- FIRST PARAGRAPH (always visible) -->
+                    <p class="about-desc">
+                        I have 5+ years of experience building fast, scalable, and accessible web 
+                        applications. I specialise in React, Tailwind, and GraphQL, crafting clean UI 
+                        architectures and delivering production‑ready interfaces that feel smooth, 
+                        intuitive, and reliable.
+                    </p>
+        
+                    <!-- HIDDEN PARAGRAPHS -->
+                    <div id="about-extra">
+                        <p class="about-desc">
+                            My work centres around the modern Angular ecosystem—reactive programming with RxJS, 
+                            Signals, clean architecture, interceptors, and scalable component design. I focus on 
+                            building fast, accessible, and visually polished interfaces using Angular, TypeScript, T
+                            ailwind CSS, and Angular Material.
+                            </p>
+                            
+                            <p class="about-desc">
+                            I specialise in transforming Figma designs into production‑ready Angular experiences, 
+                            creating reusable component systems, shared libraries, and UI patterns that scale across 
+                            large teams and enterprise applications.
+                            </p>
+                            
+                            <p class="about-desc">
+                            Alongside Angular, I also work with React, Vue 3, and the Composition API, giving me a broad 
+                            perspective across modern frontend frameworks and helping me choose the right patterns for each project.
+                            </p>
+                            
+                            <p class="about-desc">
+                            I thrive in Agile environments, enjoy collaborating closely with designers and engineers, 
+                            and love mentoring teammates in Angular best practices. Whether it’s performance optimisation, 
+                            UI system design, or integrating complex APIs, I focus on delivering solutions that are elegant, 
+                            maintainable, and built for long‑term scalability.
+                            </p>
+                    </div>
+        
+                    <!-- BUTTON -->
+                    <button id="about-toggle-btn" class="about-btn">Read More</button>
+                </div>
+        
+                <!-- IMAGE SECOND -->
+                <div class="about-img">
+                    <div class="about-img-circle">
+                        <img src="myPhoto.PNG" alt="About Image">
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+        
+
+        <!-- projects section -->
+
+        <section class="projects" id="project">
+            <h2 class="section-title">My Projects</h2>
+        
+            <div class="projects-container">
+        
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <i class='bx bx-restaurant project-icon'></i>
+                    <h3 class="project-title">Restaurant Website</h3>
+                    <p class="project-desc">
+                        A modern, responsive restaurant website built using React, Tailwind 
+                        and GraphQL Yoga mock backend. Includes menu filtering, dynamic pages 
+                        and API-driven content.
+                    </p>
+                    <a href="https://my-restaurant-theta.vercel.app/" class="project-btn">View Project</a>
+                </div>
+        
+                <!-- Project 2 -->
+                <!-- <div class="project-card">
+                    <i class='bx bx-line-chart project-icon'></i>
+                    <h3 class="project-title">Performance Lab</h3>
+                    <p class="project-desc">
+                        A React-based performance testing lab that visualizes metrics, 
+                        Lighthouse-style scoring, lazy loading, and optimization techniques.
+                    </p>
+                    <a href="#" class="project-btn">View Project</a>
+                </div> -->
+        
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <i class='bx bx-briefcase project-icon'></i>
+                    <h3 class="project-title">Jobs API (Angular)</h3>
+                    <p class="project-desc">
+                        An enterprise-grade Angular project integrating public job APIs with 
+                        interceptors, RxJS streams, caching, and clean architecture.
+                    </p>
+                    <a href="https://remote-job-finder-mu.vercel.app/" class="project-btn">View Project</a>
+                </div>
+        
+            </div>
+        </section>
+        
+        <!-- contact section -->
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact Me</h2>
+        
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        
+                <input type="hidden" name="access_key" value="64e04016-10cf-446d-a185-27386bc83b0c">
+        
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+        
+                <div class="input-box">
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Email Subject" required>
+                </div>
+        
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        
+                <button type="submit" class="contact-btn" id="contact-submit-btn">
+                    <div class="btn-inner">
+                        <span class="btn-text">Send Message</span>
+                        <span class="spinner"></span>
+                    </div>
+                </button>
+                
+        
+                <!-- ⭐ Correct redirect: go to success page first -->
+                <input type="hidden" name="redirect" value="https://portfolio-sree-zeta.vercel.app/success.html">
+        
+            </form>
+        </section>
+        
+        
+        
+        
+        
+    </body>
+</html>

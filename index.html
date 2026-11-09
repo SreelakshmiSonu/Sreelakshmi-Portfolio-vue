@@ -9,17 +9,31 @@
         <title>Sreelakshmi - Portfolio</title>
     </head>
     <body>
+        <div class="page-loader" id="page-loader" role="status" aria-live="polite" aria-label="Loading portfolio">
+            <div class="loader-mark" aria-hidden="true">S<span>.</span></div>
+            <span class="loader-ring" aria-hidden="true"></span>
+            <span class="loader-caption">Loading portfolio</span>
+        </div>
+
         <header class="header">
             <a href="#home" class="logo">Sreelakshmi.dev</a>
 
-            <i class='bx bx-menu' id="menu-icon"></i>
+            <button class="menu-toggle" id="menu-icon" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
 
-            <nav class="navbar">
+            <nav class="navbar" id="primary-navigation">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#project">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
+            <div class="theme-control">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch theme">
+                    <i class="bx bx-moon" aria-hidden="true"></i>
+                </button>
+                <span class="theme-hint" aria-hidden="true">Change theme</span>
+            </div>
         </header>
 
         <!-- home code -->
@@ -40,9 +54,10 @@
                     <h2 class="home-role typewriter">And I'm a Frontend Developer</h2>
 
                     <p class="home-desc fade-up delay-2">
-                        I build scalable, high‑performance interfaces with
-                        <strong>Angular, TypeScript, RxJS, Signals and Tailwind CSS</strong>, transforming
-                        complex workflows into clean, reliable user experiences.
+                        I’m a Vue.js developer with 5+ years of frontend experience, building
+                        fast, accessible interfaces with Vue 3, the Composition API and
+                        TypeScript. I turn complex requirements into polished, reliable
+                        experiences, with additional experience in React and Angular.
                     </p>
 
         
@@ -79,33 +94,72 @@
                     <!-- HIDDEN PARAGRAPHS -->
                     <div id="about-extra">
                         <p class="about-desc">
-                            My work centres around the modern Angular ecosystem—reactive programming with RxJS, 
-                            Signals, clean architecture, interceptors, and scalable component design. I focus on 
-                            building fast, accessible, and visually polished interfaces using Angular, TypeScript, T
-                            ailwind CSS, and Angular Material.
-                            </p>
-                            
-                            <p class="about-desc">
-                            I specialise in transforming Figma designs into production‑ready Angular experiences, 
-                            creating reusable component systems, shared libraries, and UI patterns that scale across 
-                            large teams and enterprise applications.
-                            </p>
-                            
-                            <p class="about-desc">
-                            Alongside Angular, I also work with React, Vue 3, and the Composition API, giving me a broad 
-                            perspective across modern frontend frameworks and helping me choose the right patterns for each project.
-                            </p>
-                            
-                            <p class="about-desc">
-                            I thrive in Agile environments, enjoy collaborating closely with designers and engineers, 
-                            and love mentoring teammates in Angular best practices. Whether it’s performance optimisation, 
-                            UI system design, or integrating complex APIs, I focus on delivering solutions that are elegant, 
-                            maintainable, and built for long‑term scalability.
-                            </p>
-                    </div>
+                            I build modern, accessible user interfaces with Vue 3 and the Composition
+                            API, using TypeScript to create clear, maintainable components. I enjoy
+                            turning designs into polished experiences and shaping reusable UI that
+                            works consistently across an application.
+                        </p>
         
+                        <p class="about-desc">
+                            My frontend experience also includes React and Angular, along with tools
+                            such as GraphQL and Tailwind CSS. This breadth helps me adapt to different
+                            products and teams while keeping usability, performance and code quality
+                            at the centre of my work.
+                        </p>
+        
+                        <p class="about-desc">
+                            I enjoy working closely with designers and engineers in Agile teams to
+                            solve real product problems. From integrating APIs to refining responsive
+                            details, I focus on delivering dependable interfaces that are intuitive
+                            for users and straightforward for teams to maintain.
+                        </p>
+                    </div>
+
                     <!-- BUTTON -->
                     <button id="about-toggle-btn" class="about-btn">Read More</button>
+
+                    <div class="career-timeline" aria-labelledby="timeline-title">
+                        <h3 class="timeline-title" id="timeline-title">My Journey</h3>
+                        <ol class="timeline-list">
+                            <li class="timeline-item">
+                                <time datetime="2025-06">June 2025 – Present</time>
+                                <div>
+                                    <h4>Career break</h4>
+                                    <p>Taking a career break and actively seeking my next opportunity.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <time datetime="2022">2022</time>
+                                <div>
+                                    <h4>Frontend Developer · IS2</h4>
+                                    <p class="timeline-location">United Kingdom</p>
+                                    <p>Moved to the UK and began working as a Frontend Developer at IS2.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <time datetime="2019">2019</time>
+                                <div>
+                                    <h4>Software Developer · UST</h4>
+                                    <p class="timeline-location">India</p>
+                                    <p>Started my first job as a Software Developer at UST.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <time datetime="2017">2017</time>
+                                <div>
+                                    <h4>MTech, Communication Engineering</h4>
+                                    <p>Completed my MTech in Communication Engineering.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <time datetime="2014">2014</time>
+                                <div>
+                                    <h4>BTech, Electronics &amp; Communication Engineering</h4>
+                                    <p>Graduated with a BTech in Electronics and Communication Engineering.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
         
                 <!-- IMAGE SECOND -->
@@ -128,14 +182,13 @@
         
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <i class='bx bx-restaurant project-icon'></i>
-                    <h3 class="project-title">Restaurant Website</h3>
+                    <img class="project-preview" src="restaurant.png" alt="Preview of the Restaurant Website project">
+                    <!-- <i class='bx bx-restaurant project-icon'></i> -->
+                    <h3 class="project-title">Sree's Kitchen</h3>
                     <p class="project-desc">
-                        A modern, responsive restaurant website built using React, Tailwind 
-                        and GraphQL Yoga mock backend. Includes menu filtering, dynamic pages 
-                        and API-driven content.
-                    </p>
-                    <a href="https://my-restaurant-theta.vercel.app/" class="project-btn">View Project</a>
+    A responsive restaurant website built with React, TypeScript, and Tailwind, with a Node.js backend powering AI search. Includes menu filtering, dynamic pages, and content served through a GraphQL Yoga mock backend.
+</p>
+                    <a href="https://my-restaurant-theta.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">Take Me to Website</a>
                 </div>
         
                 <!-- Project 2 -->
@@ -146,23 +199,49 @@
                         A React-based performance testing lab that visualizes metrics, 
                         Lighthouse-style scoring, lazy loading, and optimization techniques.
                     </p>
-                    <a href="#" class="project-btn">View Project</a>
+                    <a href="#" class="project-btn">Take Me to Website</a>
                 </div> -->
         
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <i class='bx bx-briefcase project-icon'></i>
-                    <h3 class="project-title">Jobs API (Angular)</h3>
+                    <img class="project-preview" src="jobfinder.png" alt="Preview of the Remote Job Finder Website project">
+                    <!-- <i class='bx bx-briefcase project-icon'></i> -->
+                    <h3 class="project-title">Remote Job Finder</h3>
                     <p class="project-desc">
                         An enterprise-grade Angular project integrating public job APIs with 
                         interceptors, RxJS streams, caching, and clean architecture.
                     </p>
-                    <a href="https://remote-job-finder-mu.vercel.app/" class="project-btn">View Project</a>
+                    <a href="https://remote-job-finder-mu.vercel.app/" class="project-btn" target="_blank" rel="noopener noreferrer">Take Me to Website</a>
                 </div>
         
             </div>
         </section>
-        
+
+        <section class="activity" id="activity" aria-labelledby="activity-title">
+            <div class="activity-heading">
+                <div>
+                    <p class="activity-eyebrow">Recent development activity</p>
+                    <h2 class="section-title" id="activity-title">GitHub Commit Heatmap</h2>
+                </div>
+                <a class="activity-profile-link" href="https://github.com/SreelakshmiSonu" target="_blank" rel="noopener noreferrer">
+                    View GitHub profile <i class="bx bx-link-external" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="activity-card">
+                <p class="activity-summary" id="activity-summary" aria-live="polite">Loading commit activity…</p>
+                <div class="activity-scroll" tabindex="0" aria-label="Scrollable GitHub commit heatmap">
+                    <div class="activity-days" id="activity-days" aria-hidden="true"></div>
+                    <div class="activity-chart" id="activity-chart" role="img" aria-label="GitHub commits over the last seven days"></div>
+                </div>
+                <div class="activity-legend" aria-hidden="true">
+                    <span>Less</span>
+                    <i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i>
+                    <span>More</span>
+                </div>
+                <p class="activity-footnote">Public commits grouped by the day they were pushed to GitHub.</p>
+            </div>
+        </section>
+
         <!-- contact section -->
 
         <section class="contact" id="contact">
@@ -197,6 +276,20 @@
         
             </form>
         </section>
+
+        <footer class="site-footer">
+            <a class="footer-brand" href="#home">Sreelakshmi.dev</a>
+            <p>© <span id="copyright-year">2026</span> Sreelakshmi. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/sreelakshmi-m-s-6561b2179" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="bx bxl-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/SreelakshmiSonu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+                <a class="back-to-top" href="#home">Back to top <i class="bx bx-up-arrow-alt" aria-hidden="true"></i></a>
+            </div>
+        </footer>
         
         
         
